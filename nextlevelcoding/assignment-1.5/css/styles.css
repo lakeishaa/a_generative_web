@@ -223,7 +223,7 @@ body{
     display: inline-block; 
     color: #ffd310;
     line-height: 1.5em;
-    animation: blinker 1s 2 forwards;
+    animation: blinker 1s 3 forwards;
     background-color: white;
     padding-left: 3px;
     padding-right: 3px;
@@ -250,7 +250,7 @@ body{
     border-radius: 10px;
     background-color: #ffd310;
     color: white;
-    z-index: 5;
+    z-index: 7;
 }
 
 a:link, a:active, a:visited { 
