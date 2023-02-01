@@ -1,6 +1,17 @@
 *{
     padding: 0;
     margin: 0;
+    /* background-color: black; */
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+
+body{
+    /* background-color: black; */
+    background-color: rgb(43, 114, 73);
 }
 
 #game {
@@ -9,19 +20,33 @@
 }
 
 #character {
-    width: 20px;
+    width: 35px;
     height: 50px;
     /* background-color: red; */
     position: relative;
     top: 150px;
+    padding-left: 22px;
+    transform: scaleX(-1);
+    /* background-image: url('http://www.avatarsinpixels.com/chibi/eyJIYWlyTG93ZXIiOiI1IiwiQm9keSI6IjEiLCJTaG9lcyI6IjIiLCJQYW50cyI6IjE2IiwiVG9wIjoiMyIsIkV5ZWJyb3dzIjoiMSIsIkV5ZXMiOiIzIiwiTW91dGgiOiIyIiwiSGFpclRvcCI6IjciLCJza2luVG9uZSI6ImYxOWM2NSIsImhhaXJUb25lIjoiODkxMTE5IiwiZXllc1RvbmUiOiI0OTI1MWIiLCJwYW50c1RvbmUiOiJmMWQ0NjUiLCJwYW50c1RvbmUyIjoiNDkyNTFiIiwidG9wVG9uZSI6ImFkZTNmNCIsInNob2VzVG9uZSI6ImUyZjBmNyJ9/1/show.png'); */
+    background-image: url('http://www.avatarsinpixels.com/chibi/eyJIYWlyTG93ZXIiOiIxIiwiQm9keSI6IjEiLCJTaG9lcyI6IjIiLCJQYW50cyI6IjE3IiwiVG9wIjoiOCIsIkV5ZWJyb3dzIjoiMSIsIkV5ZXMiOiI4IiwiTW91dGgiOiIyIiwiSGFpclRvcCI6IjciLCJza2luVG9uZSI6ImYyYTA3MiIsImhhaXJUb25lIjoiYjMyNDMyIiwiaGFpclRvbmUyIjoiNWIxMjE5IiwiZXllc1RvbmUiOiIzMTBjMDgiLCJleWVzVG9uZTIiOiJmYzY1ZWQiLCJwYW50c1RvbmUiOiJhMmRiY2EiLCJwYW50c1RvbmUyIjoiN2E5MmFlIiwidG9wVG9uZSI6IjQyOTRmNSIsInRvcFRvbmUyIjoiYjFkMmY2Iiwic2hvZXNUb25lIjoiZmZmZmZmIiwic2hvZXNUb25lMiI6IjQzMGZhMyIsInNvY2tzVG9uZSI6IjA4MzEwOCIsImdsb3Zlc1RvbmUiOiJiYmQwZTkiLCJnbG92ZXNUb25lMiI6ImI1NGE0OCJ9/1/show.png');
 }
-
+/* 
 .lego {
     width:30px;
     height: 50px;
-    /* transform: scale(1.4);
+    transform: scale(1.4);
     padding-left: 10px;
-    padding-top: 5px; */
+    padding-top: 5px;
+} */
+
+/* .lego {
+    width:30px;
+    height: 50px;
+    padding-left: 10px;
+} */
+
+.lego{
+    height: 55px;
 }
 
 .animate{
@@ -39,7 +64,7 @@
 #block {
     width: 20px;
     height: 20px;
-    background-color: blue;
+    /* background-color: blue; */
     position: relative;
     top: 130px;
     left: 480px;
@@ -51,6 +76,11 @@
     100%{left:-40px;}
 }
 
+.soccerball{
+    width: 20px;
+    height: 20px;
+}
+
 /* MULAI SINI SI */
 #game{
     margin: auto;
@@ -59,20 +89,47 @@
     /* border: 6px; */
     /* border-radius: 5%; */
     border-style: inset;
-    background-color: rgb(233, 212, 25);
+    /* background-color: rgb(233, 212, 25); */
     position: relative;
+}
+
+.background{
+    margin-top: -600px;
+    /* margin-left: -50px; */
+    position: relative;
+    z-index: -3;
+    background: repeat-x;
+    animation: slide 40s linear infinite;
+    padding-bottom: 30px;
+    transform: scale(0.2);
+    filter: brightness(130%);
+    cursor: url("./images/cursor/cursor-pointer.png"), auto;
+
+}
+
+@keyframes slide{
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1692px, 0, 0);
+    }
 }
 
 #game-border{
     margin: auto;
     margin-top: 10em;
     transform: scale(1.7);
-    border: 6px;
+    border: 10px;
     /* border-radius: 5%; */
     border-style: inset;
-    background-color: blue;
+    /* background-color: #44a7e0; */
+    background-color: #7dd7ff;
     width: 500px;
     height: 250px;
+    overflow: hidden;
+    cursor: url("../images/cursor-pointer.png"), auto;
+
 }
 
 #ground {
@@ -125,5 +182,80 @@
 	}
 }
 
+.letters-ul {
+    /* background-color: #2E79EA; */
+    /* border: hsla(216, 82%, 55%, 0); */
+    border: none;
+    justify-content: auto;
+    text-align: center;
+}
+
+#letters {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+
+    text-align: center;
+    color: #ffd310;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.3rem;
+    padding: 2rem 0rem 0rem 0rem;
+    margin-top: 50px;
+        
+    transition: transform 0s;
+}
+     
+#letters:hover {
+    transform: translate(0, -15px);
+    color: white;
+}
+
+#clickme{
+    position:relative;
+    transform: scaleX(-1);
+    font-family: 'Press Start 2P', cursive;
+    padding-top: -200px;
+    font-size: 7px;
+    margin-left: -21px;
+    /* top: -60px; */
+    top: -65px;
+    text-align:center;
+    display: inline-block; 
+    color: #ffd310;
+    line-height: 1.5em;
+    animation: blinker 1s 2 forwards;
+    background-color: white;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 2px;
+    border-radius: 6px;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+
+#restart{
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: stretch;
+    margin-top: 150px;
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffd310;
+    color: white;
+    z-index: 5;
+}
+
+a:link, a:active, a:visited { 
+    text-decoration: none; 
+    color: black;
+}
 
 
